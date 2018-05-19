@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalNumbersDel2", "DigitalNumbersDel2\DigitalNumbersDel2.csproj", "{5EB29EC6-4A6E-428A-A8F2-C3A40C422696}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EB29EC6-4A6E-428A-A8F2-C3A40C422696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB29EC6-4A6E-428A-A8F2-C3A40C422696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB29EC6-4A6E-428A-A8F2-C3A40C422696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB29EC6-4A6E-428A-A8F2-C3A40C422696}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B4679C0-A07B-449B-AD4F-1B4B241621E1}
+	EndGlobalSection
+EndGlobal
