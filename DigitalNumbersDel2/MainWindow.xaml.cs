@@ -69,55 +69,38 @@ namespace DigitalNumbersDel2
                 case "1":
                     _diffListTwoListOne = _listTwo.Except(_listOne).ToList();
                     foreach (Button b in _diffListTwoListOne)
-                    {
                         b.Background = Brushes.WhiteSmoke;
-                    }
+
                     _diffListThreeListOne = _listThree.Except(_listOne).ToList();
                     foreach (Button b in _diffListThreeListOne)
-                    {
                         b.Background = Brushes.WhiteSmoke;
-                    }
-                    foreach (Button b in _listOne)
-                    {
-                        b.Background = Brushes.Black;
-                    }
 
+                    foreach (Button b in _listOne)
+                        b.Background = Brushes.Black;
                     break;
                 case "2":
                     _diffListOneListTwo = _listOne.Except(_listTwo).ToList();
                     foreach (Button b in _diffListOneListTwo)
-                    {
                         b.Background = Brushes.WhiteSmoke;
-                    }
+
                     _diffListThreeListTTwo = _listThree.Except(_listTwo).ToList();
                     foreach (Button b in _diffListThreeListTTwo)
-                    {
                         b.Background = Brushes.WhiteSmoke;
-                    }
 
                     foreach (Button b in _listTwo)
-                    {
                         b.Background = Brushes.Black;
-                    }
                     break;
                 case "3":
                     _diffListOneListThree = _listOne.Except(_listThree).ToList();
                     foreach (Button b in _diffListOneListThree)
-                    {
                         b.Background = Brushes.WhiteSmoke;
-                    }
 
                     _diffListTwoListThree = _listTwo.Except(_listThree).ToList();
                     foreach (Button b in _diffListTwoListThree)
-                    {
                         b.Background = Brushes.WhiteSmoke;
-                    }
 
                     foreach (Button b in _listThree)
-                    {
                         b.Background = Brushes.Black;
-
-                    }
                     break;
             }
         }
