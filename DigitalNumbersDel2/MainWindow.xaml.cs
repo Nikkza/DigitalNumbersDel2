@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -59,6 +60,18 @@ namespace DigitalNumbersDel2
                 Button10
             };
         }
+        private void ListButtons(List<Button> s)
+        {
+            foreach (Button b in s)
+                b.Background = Brushes.Black;
+        }
+
+        private void CalcDigits(List<Button> diff, List<Button> one, List<Button> two)
+        {
+            diff = one.Except(two).ToList();
+            foreach (Button b in diff)
+                b.Background = Brushes.WhiteSmoke;
+        }
 
         private void ButtonShowDigits(object sender, RoutedEventArgs e)
         {
@@ -67,42 +80,24 @@ namespace DigitalNumbersDel2
             switch (button?.Content)
             {
                 case "1":
-                    _diffListTwoListOne = _listTwo.Except(_listOne).ToList();
-                    foreach (Button b in _diffListTwoListOne)
-                        b.Background = Brushes.WhiteSmoke;
-
-                    _diffListThreeListOne = _listThree.Except(_listOne).ToList();
-                    foreach (Button b in _diffListThreeListOne)
-                        b.Background = Brushes.WhiteSmoke;
-
-                    foreach (Button b in _listOne)
-                        b.Background = Brushes.Black;
+                    ListButtons(_listOne);
+                    CalcDigits(_diffListTwoListOne, _listTwo, _listOne);
+                    CalcDigits(_diffListThreeListOne, _listThree, _listOne);
                     break;
                 case "2":
-                    _diffListOneListTwo = _listOne.Except(_listTwo).ToList();
-                    foreach (Button b in _diffListOneListTwo)
-                        b.Background = Brushes.WhiteSmoke;
-
-                    _diffListThreeListTTwo = _listThree.Except(_listTwo).ToList();
-                    foreach (Button b in _diffListThreeListTTwo)
-                        b.Background = Brushes.WhiteSmoke;
-
-                    foreach (Button b in _listTwo)
-                        b.Background = Brushes.Black;
+                    ListButtons(_listTwo);
+                    CalcDigits(_diffListOneListTwo, _listOne, _listTwo);
+                    CalcDigits(_diffListThreeListTTwo, _listThree, _listTwo);
+                   
                     break;
                 case "3":
-                    _diffListOneListThree = _listOne.Except(_listThree).ToList();
-                    foreach (Button b in _diffListOneListThree)
-                        b.Background = Brushes.WhiteSmoke;
-
-                    _diffListTwoListThree = _listTwo.Except(_listThree).ToList();
-                    foreach (Button b in _diffListTwoListThree)
-                        b.Background = Brushes.WhiteSmoke;
-
-                    foreach (Button b in _listThree)
-                        b.Background = Brushes.Black;
+                    ListButtons(_listThree);
+                    CalcDigits(_diffListOneListThree, _listOne, _listThree);
+                    CalcDigits(_diffListTwoListThree, _listTwo, _listThree);                  
                     break;
+
             }
-        }
+
+        }      
     }
 }
