@@ -89,7 +89,6 @@ namespace DigitalNumbersDel2
                     ListButtons(_listTwo);
                     CalcDigits(_diffListOneListTwo, _listOne, _listTwo);
                     CalcDigits(_diffListThreeListTTwo, _listThree, _listTwo);
-
                     break;
                 case "3":
                     ListButtons(_listThree);
