@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,6 +32,7 @@ namespace DigitalNumbersDel2
                 Button14,
                 Button15
             };
+
             _listTwo = new List<Button>
             {
                 Button6,
@@ -45,6 +45,7 @@ namespace DigitalNumbersDel2
                 Button15,
                 Button20
             };
+
             _listThree = new List<Button>
             {
                 Button11,
@@ -88,16 +89,15 @@ namespace DigitalNumbersDel2
                     ListButtons(_listTwo);
                     CalcDigits(_diffListOneListTwo, _listOne, _listTwo);
                     CalcDigits(_diffListThreeListTTwo, _listThree, _listTwo);
-                   
+
                     break;
                 case "3":
                     ListButtons(_listThree);
                     CalcDigits(_diffListOneListThree, _listOne, _listThree);
-                    CalcDigits(_diffListTwoListThree, _listTwo, _listThree);                  
+                    CalcDigits(_diffListTwoListThree, _listTwo, _listThree);
                     break;
 
             }
-
-        }      
+        }
     }
 }
